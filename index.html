@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>CROSSZERO</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<style>
+	canvas{
+		border: 1px solid black;
+		width: 150px;
+		height: 150px;
+		border-collapse: collapse;
+		text-align: center;
+		padding: 0px;
+		margin-bottom: -6px;
+		margin-left: -6px;
+	}
+	#canvas00,#canvas10,#canvas20{margin-left:500px;}
+	img{
+		height: 80px;
+		width: 80px;
+		border: 1px solid green;
+	
+	}
+	
+	
+	</style>
+	<script src="script.js"></script>
+	</head>
+<body>
+
+<canvas id="canvas00" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+<canvas id="canvas01" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+<canvas id="canvas02" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas><br>
+<canvas id="canvas10" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+<canvas id="canvas11" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+<canvas id="canvas12" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas><br>
+<canvas id="canvas20" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+<canvas id="canvas21" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas>
+<canvas id="canvas22" ondrop="drop(event)" ondragover="allowDrop(event)"></canvas><br>
+
+</body>
+<hr>
+<img id="drag1.1"src="image/cross.gif"  draggable="true" ondragstart="drag(event)">
+<img id="drag1.2"src="image/cross.gif" draggable="true" ondragstart="drag(event)">
+<img id="drag1.3"src="image/cross.gif"  draggable="true" ondragstart="drag(event)">
+<img id="drag1.4"src="image/cross.gif"  draggable="true" ondragstart="drag(event)">
+<img id="drag1.5"src="image/cross.gif"  draggable="true" ondragstart="drag(event)">
+<img id="drag2.1"src="image/zero.jpg" alt="zero"  draggable="true" ondragstart="drag(event)">
+<img id="drag2.2"src="image/zero.jpg" alt="zero"  draggable="true" ondragstart="drag(event)">
+<img id="drag2.3"src="image/zero.jpg" alt="zero" draggable="true" ondragstart="drag(event)">
+<img id="drag2.4"src="image/zero.jpg" alt="zero" draggable="true" ondragstart="drag(event)">
+<p id="display"></p>
+<footer><pre>Created By: Md Asif Iqbal</pre></footer>
+</html>
