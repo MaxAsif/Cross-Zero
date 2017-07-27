@@ -44,6 +44,7 @@ function drop(ev) {
 			prev = item;
 			console.log("previous",prev);
 			console.log(arr);
+			console.log("update game called with x,y",x,y);
 			updategame(x,y);
 			
 		}
@@ -53,34 +54,49 @@ function drop(ev) {
 		}
 	}
 	else
+	{
+		console.log("Result is a tie");
 		alert("Game Over. Its a tie");
+		
+	}
 }
 function updategame(x,y)
 {
 	
 	if((arr[x][0]==item)&&(arr[x][1]==item)&&(arr[x][2]==item))
 	{
-		alert("Game Over");
+		
 		draw("row",x,0);
+		//alert("Game Over");
 	}
-	if((arr[0][y]==item)&&(arr[1][y]==item)&&(arr[2][y]==item))
+	else if((arr[0][y]==item)&&(arr[1][y]==item)&&(arr[2][y]==item))
 	{
-		alert("Game Over");
 		draw("col",0,y);
+		//alert("Game Over");
 	}
-	if((x+y)%2==0)
+	else if((x+y)%2==0)
 	{
 		if((arr[0][0]==item)&&(arr[1][1]==item)&&(arr[2][2]==item))
 		{
-			alert("Game Over");
+			
 			draw("leftdia",0,0);
+			//alert("Game Over");
 		}	
-		if((arr[0][2]==item)&&(arr[1][1]==item)&&(arr[2][0]==item))
+		else if((arr[0][2]==item)&&(arr[1][1]==item)&&(arr[2][0]==item))
 		{
-			alert("Game Over");
+			
 			draw("rightdia",0,2);
+			//alert("Game Over");
 		}	
 	}
+
+	if(isEmpty()==false)
+	{
+		console.log("Game over is empty also called");
+		alert("Game over. Its a tie");
+		document.getElementById("display").innerHTML="<hr><button onclick='location.reload()'>RESET</button><br><h1> TIE!</h1>";
+	}
+		
 }
 function draw(dir,x,y)
 {
@@ -140,8 +156,10 @@ function draw(dir,x,y)
 			ctx.stroke();
 			draw(dir,++x,--y);
 		}
+		
 	document.getElementById("display").innerHTML="<hr><button onclick='location.reload()'>RESET</button><br><h1>"+item+" WON!</h1>";
 	}
+	
 }
 	
 	
